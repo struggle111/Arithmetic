@@ -15,9 +15,10 @@ public class LinkUtil {
     public static void traverseLinked(Node header) {
         Node temp = header;
         while (temp != null) {
-            System.out.println("data = " + temp.getData());
+            System.out.print(temp.getData() + " ");
             temp = temp.getNext();
         }
+        System.out.println();
     }
 
     /**
@@ -318,6 +319,51 @@ public class LinkUtil {
             p2 = p2.getNext();
         }
         return p1;
+
+    }
+
+    /**
+     * 合并两个排好序的链表
+     */
+    public static Node mergeLink(Node h1, Node h2) {
+
+        if (h1 == null && h1 == null) {
+            return null;
+        } else if (h1 == null) {
+            return h2;
+        } else if (h2 == null) {
+            return h1;
+        } else {
+            Node header = new Node();
+            Node temp = header;
+
+            while (h1 != null && h2 != null) {
+                if (h1.getData() < h2.getData()) {
+                    temp.setNext(h1);
+                    temp = h1;
+                    h1 = h1.getNext();
+
+
+                } else {
+                    temp.setNext(h2);
+                    temp = h2;
+                    h2 = h2.getNext();
+                }
+            }
+
+            while (h1 != null) {
+                temp.setNext(h1);
+                temp = h1;
+                h1 = h1.getNext();
+            }
+            while (h2 != null) {
+                temp.setNext(h2);
+                temp = h2;
+                h2 = h2.getNext();
+            }
+
+            return header.getNext();
+        }
 
     }
 

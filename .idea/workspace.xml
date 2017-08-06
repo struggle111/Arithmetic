@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddd80ef4-c344-468d-b68d-78f7c8f0d3fc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/data/Node.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/util/LinkUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Array.java" afterPath="$PROJECT_DIR$/src/util/Array.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/NumberUtil.java" afterPath="$PROJECT_DIR$/src/util/NumberUtil.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/QueueByStack.java" afterPath="$PROJECT_DIR$/src/data/QueueByStack.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ShortestPath.java" afterPath="$PROJECT_DIR$/src/util/ShortestPath.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/StringUtils.java" afterPath="$PROJECT_DIR$/src/util/StringUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/TreeUtil.java" afterPath="$PROJECT_DIR$/src/util/TreeUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Arithmetic/Array.class" afterPath="$PROJECT_DIR$/out/production/Arithmetic/Array.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Arithmetic/Main.class" afterPath="$PROJECT_DIR$/out/production/Arithmetic/Main.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Arithmetic/Array.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/data/Node.java" afterPath="$PROJECT_DIR$/src/data/Node.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/util/LinkUtil.java" afterPath="$PROJECT_DIR$/src/util/LinkUtil.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,11 +19,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1539">
-              <caret line="81" column="11" lean-forward="false" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="11" />
+            <state relative-caret-position="403">
+              <caret line="223" column="38" lean-forward="false" selection-start-line="223" selection-start-column="38" selection-end-line="223" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/src/util/NumberUtil.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
-              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -58,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LinkUtil.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="LinkUtil.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/util/LinkUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+            <state relative-caret-position="207">
+              <caret line="343" column="38" lean-forward="true" selection-start-line="343" selection-start-column="38" selection-end-line="343" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,9 +66,12 @@
       <file leaf-file-name="Node.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/data/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="285">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <element signature="e#153#154#0" expanded="true" />
+                <element signature="e#185#186#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -171,8 +167,8 @@
         <option value="$PROJECT_DIR$/src/util/TreeUtil.java" />
         <option value="$PROJECT_DIR$/src/data/QueueByStack.java" />
         <option value="$PROJECT_DIR$/src/data/Node.java" />
-        <option value="$PROJECT_DIR$/src/util/LinkUtil.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/util/LinkUtil.java" />
       </list>
     </option>
   </component>
@@ -277,6 +273,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="FullScreen" value="true" />
+    <property name="ChangesBrowser.SHOW_FLATTEN" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -697,7 +694,7 @@
       <option name="presentableId" value="Default" />
       <updated>1501893755517</updated>
       <workItem from="1501893759075" duration="8226000" />
-      <workItem from="1501980637081" duration="6756000" />
+      <workItem from="1501980637081" duration="9391000" />
     </task>
     <task id="LOCAL-00001" summary="array">
       <created>1501989164717</created>
@@ -706,11 +703,18 @@
       <option name="project" value="LOCAL" />
       <updated>1501989164717</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Link">
+      <created>1501989791955</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1501989791955</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14982000" />
+    <option name="totallyTimeSpent" value="17617000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -719,13 +723,13 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908162" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32908162" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32908162" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -758,7 +762,8 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="array" />
-    <option name="LAST_COMMIT_MESSAGE" value="array" />
+    <MESSAGE value="Link" />
+    <option name="LAST_COMMIT_MESSAGE" value="Link" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -780,7 +785,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/util/NumberUtil.java</url>
-          <line>18</line>
+          <line>16</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -895,7 +900,7 @@
     <entry file="file://$PROJECT_DIR$/src/util/NumberUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -910,26 +915,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/data/Node.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/LinkUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="26" column="23" lean-forward="false" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+        <state relative-caret-position="285">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#153#154#0" expanded="true" />
+            <element signature="e#185#186#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1539">
-          <caret line="81" column="11" lean-forward="false" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="11" />
+        <state relative-caret-position="403">
+          <caret line="223" column="38" lean-forward="false" selection-start-line="223" selection-start-column="38" selection-end-line="223" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/LinkUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="343" column="38" lean-forward="true" selection-start-line="343" selection-start-column="38" selection-end-line="343" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

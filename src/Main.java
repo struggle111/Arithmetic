@@ -1,5 +1,4 @@
 import data.Node;
-import util.Array;
 import util.LinkUtil;
 
 public class Main {
@@ -72,9 +71,14 @@ public class Main {
         /**
          * 调整数组顺序使奇数位于偶数前面
          */
-        int[] num = new int[]{2, 3, 5, 6, 7, 8, 10, 11, 13, 14, 15};
-        Array.exchangeNum(num, 0, num.length - 1);
-        traverseArray(num);
+//        int[] num = new int[]{2, 3, 5, 6, 7, 8, 10, 11, 13, 14, 15};
+//        Array.exchangeNum(num, 0, num.length - 1);
+//        traverseArray(num);
+
+        /**
+         * 链表相关的算法
+         */
+        linked();
 
     }
 
@@ -93,47 +97,47 @@ public class Main {
      * 链表相关的算法
      */
     private static void linked() {
-        header = new Node(0);
-        current = header;
-
-        for (int i = 1; i < 4; i++) {
-            addNode(new Node(i));
-        }
-        Node loopIn = new Node(90);
-        current.setNext(loopIn);
-        current = loopIn;
-
-        for (int k = 5; k < 8; k++) {
-            addNode(new Node(k));
-        }
-        //设置环链表
+//        header = new Node(0);
+//        current = header;
+//
+//        for (int i = 1; i < 4; i++) {
+//            addNode(new Node(i));
+//        }
+//        Node loopIn = new Node(90);
 //        current.setNext(loopIn);
-
-
-        header1 = new Node(0);
-        current1 = header1;
-        for (int h = 1; h < 4; h++) {
-            addNode1(new Node(h));
-        }
-
-        header2 = new Node(0);
-        current2 = header2;
-        for (int v = 1; v < 7; v++) {
-            addNode2(new Node(v));
-        }
-
-        for (int q = 7; q < 12; q++) {
-            Node node = new Node(q);
-            addNode2(node);
-            addNode1(node);
-        }
+//        current = loopIn;
+//
+//        for (int k = 5; k < 8; k++) {
+//            addNode(new Node(k));
+//        }
+//        //设置环链表
+////        current.setNext(loopIn);
+//
+//
+//        header1 = new Node(0);
+//        current1 = header1;
+//        for (int h = 1; h < 4; h++) {
+//            addNode1(new Node(h));
+//        }
+//
+//        header2 = new Node(0);
+//        current2 = header2;
+//        for (int v = 1; v < 7; v++) {
+//            addNode2(new Node(v));
+//        }
+//
+//        for (int q = 7; q < 12; q++) {
+//            Node node = new Node(q);
+//            addNode2(node);
+//            addNode1(node);
+//        }
 
         /**
          * 遍历链表
          */
 //        traverseLinked(header);
 
-        System.out.println("========================================");
+//        System.out.println("========================================");
 
         /**
          * 删除节点
@@ -197,9 +201,29 @@ public class Main {
         /**
          * 从链表的尾部开始遍历
          */
+//        LinkUtil.traverseLinked(header);
+//        System.out.println("##########################");
+//        LinkUtil.traverseLinkedBack(header);
+
+        /**
+         * 合并两个有序链表
+         */
+        header1 = new Node(1);
+        current1 = header1;
+        for (int i = 3; i < 10; i += 2) {
+            addNode1(new Node(i));
+        }
+        LinkUtil.traverseLinked(header1);
+        header2 = new Node(2);
+        current2 = header2;
+        for (int i = 4; i < 10; i += 2) {
+            addNode2(new Node(i));
+        }
+        LinkUtil.traverseLinked(header2);
+        Node header = LinkUtil.mergeLink(header1, header2);
         LinkUtil.traverseLinked(header);
-        System.out.println("##########################");
-        LinkUtil.traverseLinkedBack(header);
+
+
     }
 
     /**
@@ -220,5 +244,10 @@ public class Main {
     private static void addNode2(Node node) {
         current2.setNext(node);
         current2 = node;
+    }
+
+    private static void addNode(Node header, Node node) {
+        header.setNext(node);
+        header = node;
     }
 }
