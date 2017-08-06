@@ -54,6 +54,20 @@ public class Main {
         /**
          * 打印1到最大的n位数
          */
-        NumberUtil.printAllNum(5);
+//        NumberUtil.printAllNum(5);
+
+        /**
+         * 调整数组顺序使奇数位于偶数前面
+         */
+        int[] num = new int[]{2, 3, 5, 6, 7, 8, 10, 11, 13, 14, 15};
+        Array.exchangeNum(num, 0, num.length - 1);
+        traverseArray(num);
+
+    }
+
+    private static void traverseArray(int[] num) {
+        for (int i = 0; i < num.length; i++) {
+            System.out.println(num[i]);
+        }
     }
 }
