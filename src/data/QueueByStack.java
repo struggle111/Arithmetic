@@ -1,3 +1,5 @@
+package data;
+
 import java.util.Stack;
 
 /**
@@ -42,9 +44,6 @@ public class QueueByStack<T> {
     }
 
     public boolean isEmpty() {
-        if ((s1 != null && s1.size() > 0) || (s2 != null && s2.size() > 0)) {
-            return false;
-        }
-        return true;
+        return !((s1 != null && s1.size() > 0) || (s2 != null && s2.size() > 0));
     }
 }
