@@ -1,5 +1,6 @@
 import data.Node;
 import util.LinkUtil;
+import util.StringUtil;
 
 public class Main {
 
@@ -22,7 +23,7 @@ public class Main {
 //        boolean isExist = util.Array.isExist(array, 20);
 //        System.out.println("isExist = " + isExist);
 
-//        String result = util.StringUtils.replaceNullSpace(" we are happy . ", "%20");
+//        String result = util.StringUtil.replaceNullSpace(" we are happy . ", "%20");
 //        System.out.println("result = " + result);
 
 //        Tree header = util.TreeUtil.createSampleTree();
@@ -78,7 +79,27 @@ public class Main {
         /**
          * 链表相关的算法
          */
-        linked();
+//        linked();
+
+        /**
+         * 树
+         */
+//        TreeUtil.main();
+
+        /**
+         * 栈
+         */
+//        StackUtil.main();
+
+        /**
+         * 字符串
+         */
+        StringUtil.main();
+
+        /**
+         * 数字
+         */
+//        NumberUtil.main();
 
     }
 

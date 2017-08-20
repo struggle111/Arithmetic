@@ -6,6 +6,14 @@ package util;
 public class NumberUtil {
 
     /**
+     * main 函数
+     */
+    public static void main() {
+        int count = getCount(3);
+        System.out.println(count);
+    }
+
+    /**
      * 给一个整数，求其二进制中1的个数
      *
      * @param num
@@ -73,6 +81,13 @@ public class NumberUtil {
         for (int i = 1; i <= temp * 9; i++) {
             System.out.println(i);
         }
+    }
+
+
+    public static int getCount(int n) {
+        int temp = 0;
+        boolean b = n == 0 || ((temp = getCount(n - 1)) != 0);
+        return temp + n;
     }
 
 }

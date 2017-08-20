@@ -2,10 +2,33 @@ package util;
 
 import data.Tree;
 
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
 /**
  * Created by baiyuanwei on 17/8/5.
  */
 public class TreeUtil {
+
+    /**
+     * main 函数
+     */
+    public static void main() {
+        Tree root = createSampleTree();
+//        Stack<Tree> stack = findNode(root, 3);
+//        while (stack.size() > 0) {
+//            System.out.println(stack.pop().getData());
+//        }
+
+//        layerTraverseTree(root);
+
+        Tree q = root.getLeftChild().getRightChild().getRightChild();
+        Tree p = root.getLeftChild().getRightChild().getRightChild().getLeftChild();
+        Tree node = getMinParentNode(root, q, p);
+        System.out.println("最低公共父结点：node = " + node.getData());
+
+    }
 
     /**
      * 一个简单的二叉树
@@ -21,6 +44,11 @@ public class TreeUtil {
         Tree t5 = new Tree(5);
         Tree t6 = new Tree(6);
         Tree t7 = new Tree(7);
+        Tree t8 = new Tree(8);
+        Tree t9 = new Tree(9);
+        Tree t10 = new Tree(10);
+        Tree t11 = new Tree(11);
+
 
         t1.setLeftChild(t2);
         t1.setRightChild(t3);
@@ -28,6 +56,10 @@ public class TreeUtil {
         t2.setRightChild(t5);
         t4.setRightChild(t6);
         t5.setLeftChild(t7);
+        t5.setRightChild(t8);
+        t8.setLeftChild(t9);
+        t8.setRightChild(t10);
+        t10.setLeftChild(t11);
 
 
         return t1;
@@ -69,6 +101,25 @@ public class TreeUtil {
             lastTraverseTree(header.getLeftChild());
             lastTraverseTree(header.getRightChild());
             System.out.print(header.getData() + " ");
+        }
+    }
+
+    public static void layerTraverseTree(Tree header) {
+        if (header == null) {
+            return;
+        }
+        Queue<Tree> queue = new LinkedList<>();
+        queue.add(header);
+        while (!queue.isEmpty()) {
+            Tree node = queue.poll();
+            System.out.println(node.getData());
+            if (node.getLeftChild() != null) {
+                queue.add(node.getLeftChild());
+            }
+
+            if (node.getRightChild() != null) {
+                queue.add(node.getRightChild());
+            }
         }
     }
 
@@ -114,5 +165,75 @@ public class TreeUtil {
         }
 
         return header;
+    }
+
+    /**
+     * 查找一颗树中的一个节点，并返回其路径
+     *
+     * @param node
+     * @param num
+     * @return
+     */
+    public static Stack<Tree> findNode(Tree node, int num) {
+        Stack<Tree> stack = new Stack<>();
+        getPath(node, num, stack);
+        Stack<Tree> resultStack = new Stack<>();
+        while (stack.size() > 0) {
+            resultStack.push(stack.pop());
+        }
+
+        return resultStack;
+    }
+
+    /**
+     * 得到一个节点到根节点的路径
+     *
+     * @param node
+     * @param num
+     * @param stack
+     * @return
+     */
+    public static boolean getPath(Tree node, int num, Stack<Tree> stack) {
+        if (node == null) {
+            return false;
+        }
+
+        stack.push(node);
+        if (node.getData() == num) {
+            return true;
+        }
+
+        boolean leftResult = getPath(node.getLeftChild(), num, stack);
+        boolean rightResult = getPath(node.getRightChild(), num, stack);
+
+        if (!leftResult && !rightResult) {
+            stack.pop();
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    /**
+     * 求两个结点的最低公共父结点
+     *
+     * @param root
+     * @param q
+     * @param p
+     * @return
+     */
+    public static Tree getMinParentNode(Tree root, Tree q, Tree p) {
+        if (root == null) {
+            return null;
+        }
+        if (root == q || root == p) {
+            return root;
+        }
+        Tree nodeLeft = getMinParentNode(root.getLeftChild(), q, p);
+        Tree nodeRight = getMinParentNode(root.getRightChild(), q, p);
+        if (nodeLeft != null && nodeRight != null) {
+            return root;
+        }
+        return nodeLeft == null ? nodeRight : nodeLeft;
     }
 }
