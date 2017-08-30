@@ -1,6 +1,6 @@
 import data.Node;
 import util.LinkUtil;
-import util.StringUtil;
+import util.SortUtil;
 
 public class Main {
 
@@ -94,12 +94,17 @@ public class Main {
         /**
          * 字符串
          */
-        StringUtil.main();
+//        StringUtil.main();
 
         /**
          * 数字
          */
 //        NumberUtil.main();
+
+        /**
+         * 排序
+         */
+        SortUtil.main();
 
     }
 
