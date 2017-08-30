@@ -15,7 +15,8 @@ public class SortUtil {
 //        bubbleGoodSort(numArray);
 //        selectSort(numArray);
 //        insertSort(numArray);
-        mergeSort(numArray, 0, numArray.length - 1);
+//        mergeSort(numArray, 0, numArray.length - 1);
+        shellSort(numArray);
 
 
         traversalSort(numArray);
@@ -232,4 +233,30 @@ public class SortUtil {
             flag++;
         }
     }
+
+    /**
+     * 希尔排序
+     *
+     * @param array
+     */
+    private static void shellSort(int[] array) {
+        if (array == null || array.length == 0) {
+            return;
+        }
+
+        int d = array.length / 2;
+        while (d > 0) {
+            for (int i = 0; i < array.length; i += d) {
+                int k = i;
+                while (k >= 0 && k + d < array.length && array[k + d] < array[k]) {
+                    int temp = array[k + d];
+                    array[k + d] = array[k];
+                    array[k] = temp;
+                    k -= d;
+                }
+            }
+            d /= 2;
+        }
+    }
+
 }
