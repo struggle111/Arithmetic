@@ -23,10 +23,13 @@ public class TreeUtil {
 
 //        layerTraverseTree(root);
 
-        Tree q = root.getLeftChild().getRightChild().getRightChild();
-        Tree p = root.getLeftChild().getRightChild().getRightChild().getLeftChild();
-        Tree node = getMinParentNode(root, q, p);
-        System.out.println("最低公共父结点：node = " + node.getData());
+//        Tree q = root.getLeftChild().getRightChild().getRightChild();
+//        Tree p = root.getLeftChild().getRightChild().getRightChild().getLeftChild();
+//        Tree node = getMinParentNode(root, q, p);
+//        System.out.println("最低公共父结点：node = " + node.getData());
+
+        int depth = getDepth(root, 0);
+        System.out.println("root.depth = " + depth);
 
     }
 
@@ -104,6 +107,11 @@ public class TreeUtil {
         }
     }
 
+    /**
+     * 层序遍历
+     *
+     * @param header
+     */
     public static void layerTraverseTree(Tree header) {
         if (header == null) {
             return;
@@ -123,6 +131,13 @@ public class TreeUtil {
         }
     }
 
+    /**
+     * 根据前序、中序遍历创建一颗二叉树
+     *
+     * @param front
+     * @param mid
+     * @return
+     */
     public static Tree createTree(int[] front, int[] mid) {
         if (front == null || front.length <= 0 || mid == null || mid.length <= 0 || mid.length != front.length) {
             return null;
@@ -132,6 +147,17 @@ public class TreeUtil {
         return createTree(front, mid, 0, len - 1, 0, len - 1);
     }
 
+    /**
+     * 根据前序、中序遍历创建一颗二叉树
+     *
+     * @param front
+     * @param mid
+     * @param frontStart
+     * @param frontEnd
+     * @param midStart
+     * @param midEnd
+     * @return
+     */
     public static Tree createTree(int[] front, int[] mid, int frontStart, int frontEnd, int midStart, int midEnd) {
         Tree header = new Tree(front[frontStart]);
         if (frontStart == frontEnd) {
@@ -236,4 +262,26 @@ public class TreeUtil {
         }
         return nodeLeft == null ? nodeRight : nodeLeft;
     }
+
+    /**
+     * 求树的深度
+     *
+     * @param header
+     * @param count
+     * @return
+     */
+    public static int getDepth(Tree header, int count) {
+        if (header != null) {
+            count++;
+        } else {
+            return count;
+        }
+
+        int leftCount = getDepth(header.getLeftChild(), count);
+        int rightCount = getDepth(header.getRightChild(), count);
+
+        return leftCount < rightCount ? rightCount : leftCount;
+    }
+
+
 }

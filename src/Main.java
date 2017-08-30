@@ -1,6 +1,6 @@
 import data.Node;
 import util.LinkUtil;
-import util.SortUtil;
+import util.TreeUtil;
 
 public class Main {
 
@@ -84,7 +84,7 @@ public class Main {
         /**
          * 树
          */
-//        TreeUtil.main();
+        TreeUtil.main();
 
         /**
          * 栈
@@ -104,7 +104,7 @@ public class Main {
         /**
          * 排序
          */
-        SortUtil.main();
+//        SortUtil.main();
 
     }
 
