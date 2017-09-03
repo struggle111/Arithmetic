@@ -28,8 +28,19 @@ public class TreeUtil {
 //        Tree node = getMinParentNode(root, q, p);
 //        System.out.println("最低公共父结点：node = " + node.getData());
 
-        int depth = getDepth(root, 0);
-        System.out.println("root.depth = " + depth);
+//        int depth = getDepth(root, 0);
+//        System.out.println("root.depth = " + depth);
+
+        Tree header = changeToLink(getTwoSearchTree());
+        while (header.getLeftChild() != null) {
+//            System.out.print(" - " + header.getData());
+            header = header.getLeftChild();
+        }
+
+        while (header != null) {
+            System.out.print(" - " + header.getData());
+            header = header.getRightChild();
+        }
 
     }
 
@@ -283,5 +294,64 @@ public class TreeUtil {
         return leftCount < rightCount ? rightCount : leftCount;
     }
 
+    /**
+     * 得到一个二元查找树
+     *
+     * @return
+     */
+    public static Tree getTwoSearchTree() {
+        Tree t10 = new Tree(10);
+        Tree t6 = new Tree(6);
+        Tree t4 = new Tree(4);
+        Tree t8 = new Tree(8);
+        Tree t14 = new Tree(14);
+        Tree t12 = new Tree(12);
+        Tree t16 = new Tree(16);
+
+        t10.setLeftChild(t6);
+        t10.setRightChild(t14);
+        t6.setLeftChild(t4);
+        t6.setRightChild(t8);
+        t14.setLeftChild(t12);
+        t14.setRightChild(t16);
+
+        return t10;
+    }
+
+    /**
+     * 把二元查找树转变成排序的双向链表
+     *
+     * @param root
+     * @return
+     */
+    public static Tree changeToLink(Tree root) {
+        Stack<Tree> stack = new Stack();
+        middleTraverseTree(root, stack);
+
+        Tree current = stack.pop();
+        int size = stack.size();
+        for (int i = size - 1; i >= 0; i--) {
+            Tree t = stack.pop();
+            current.setRightChild(t);
+            t.setLeftChild(current);
+            current = t;
+        }
+
+        return current;
+    }
+
+    /**
+     * 中序遍历 保存在栈中
+     *
+     * @param root
+     * @param stack
+     */
+    public static void middleTraverseTree(Tree root, Stack<Tree> stack) {
+        if (root != null) {
+            middleTraverseTree(root.getLeftChild(), stack);
+            stack.push(root);
+            middleTraverseTree(root.getRightChild(), stack);
+        }
+    }
 
 }

@@ -35,8 +35,8 @@ public class StackUtil {
         output.add(4);
         output.add(3);
         output.add(5);
-        output.add(1);
         output.add(2);
+        output.add(1);
 
         boolean flag = judgeStack(input, output);
         System.out.println("result = " + flag);
@@ -53,24 +53,45 @@ public class StackUtil {
     public static boolean judgeStack(List<Integer> input, List<Integer> output) {
         Stack<Integer> stack = new Stack<>();
 
-        int length = 0;
-        for (int i = 0; i < input.size(); i++) {
-            if (input.get(i) != output.get(length)) {
-                stack.push(input.get(i));
-            } else if (stack.size() > 0 && stack.peek() == output.get(length)) {
+        int outIndex = 0;
+        int inIndex = 0;
+        while (inIndex < input.size()) {
+            if (stack.size() > 0 && stack.peek() == output.get(outIndex)) {
                 stack.pop();
-                length++;
+                outIndex++;
+            } else if (input.get(inIndex) == output.get(outIndex)) {
+                outIndex++;
+                inIndex++;
             } else {
-                length++;
+                stack.push(input.get(inIndex));
+                inIndex++;
             }
         }
 
-        while (length < output.size()) {
-            if (output.get(length) != stack.pop()) {
+        if (outIndex < output.size()) {
+            if (output.get(outIndex) != stack.pop()) {
                 return false;
             }
-            length++;
+            outIndex++;
         }
+
+//        for (int i = 0; i < input.size(); i++) {
+//            if (input.get(i) != output.get(length)) {
+//                stack.push(input.get(i));
+//            } else if (stack.size() > 0 && stack.peek() == output.get(length)) {
+//                stack.pop();
+//                length++;
+//            } else {
+//                length++;
+//            }
+//        }
+
+//        while (length < output.size()) {
+//            if (output.get(length) != stack.pop()) {
+//                return false;
+//            }
+//            length++;
+//        }
         return true;
     }
 }
